@@ -27,7 +27,7 @@
 **1. Клонируйте репозиторий**
 
 ```bash
-git clone https://github.com/kazarinovmaxim-wq/dota_heroes.git
+git clone https://github.com/RelaxInv10/dota_heroes.git
 cd dota_heroes
 ```
 
@@ -94,4 +94,4 @@ http://127.0.0.1:8000/
 
 Начинающий Python Backend-разработчик.
 
-GitHub: https://github.com/kazarinovmaxim-wq
+GitHub: https://github.com/RelaxInv10
