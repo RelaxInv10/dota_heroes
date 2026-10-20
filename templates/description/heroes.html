@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dota Heroes — Герои</title>
+
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <link rel="stylesheet" href="{% static 'css/heroes.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+
+<body>
+  {% include 'includes/header.html' %}
+
+  <main class="heroes-page">
+    <section class="heroes-header">
+      <p class="heroes-header__label">ГЕРОИ DOTA 2</p>
+
+      <h1 class="heroes-header__title">
+        ВЫБЕРИ СВОЕГО <span>ГЕРОЯ</span>
+      </h1>
+
+      <p class="heroes-header__text">
+        Изучай героев Dota 2, их роли и особенности.
+        Выбери интересующего персонажа и узнай о его стиле игры.
+      </p>
+    </section>
+
+    <section class="dota-heroes">
+      <div class="dota-heroes__heading">
+        <div>
+          <p class="dota-heroes__label">DOTA 2 • ГЕРОИ</p>
+          <h2 class="dota-heroes__title">Все герои</h2>
+        </div>
+
+        <p class="dota-heroes__subtitle">
+          Найди героя, который подходит именно тебе.
+        </p>
+      </div>
+
+      <div class="dota-heroes__grid">
+        {% for hero in hero_list %}
+          {% include 'includes/heroes_card.html' %}
+        {% empty %}
+          <p class="dota-heroes__empty">
+            Герои скоро появятся.
+          </p>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  {% include 'includes/footer.html' %}
+</body>
+</html>

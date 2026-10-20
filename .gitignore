@@ -1,0 +1,89 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+
+# ==================================
+# DOTA HEROES — DJANGO
+# ==================================
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Virtual environment
+/venv/
+/.venv/
+/env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local database
+/db.sqlite3
+/db.sqlite3-*
+*.sqlite3-journal
+
+# Django local settings
+local_settings.py
+settings_local.py
+
+# Logs
+*.log
+/logs/
+
+# Django uploaded media
+/media/
+
+# Collected static files
+/staticfiles/
+
+# Tests and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Database backups
+*.sql
+*.dump
+
+# Frontend dependencies
+node_modules/
+
+# Additional secret files
+.envrc
+*.secret
+*.secrets
+service-account*.json
+
+# Additional Python cache
+.pytype/
+.pyre/
+
+# Local database backups
+*.sqlite3
+*.sqlite3-*

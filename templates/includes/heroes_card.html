@@ -1,0 +1,40 @@
+{% load static %}
+
+<article class="dota-card">
+  <div class="dota-card__picture">
+    <img
+      src="{% static hero.image %}"
+      alt="{{ hero.name }}"
+      loading="lazy"
+      class="dota-card__image"
+    >
+  </div>
+
+  <div class="dota-card__body">
+    <h3 class="dota-card__title">{{ hero.name }}</h3>
+
+    <div class="dota-card__tags">
+      {% if hero.attribute %}
+        <span class="dota-card__attribute">
+          {{ hero.attribute.name }}
+        </span>
+      {% endif %}
+
+      {% for position in hero.positions.all %}
+        <span class="dota-card__position">
+          {{ position.name }}
+        </span>
+      {% endfor %}
+    </div>
+
+    <p class="dota-card__description">
+      {{ hero.short_description|truncatechars:140 }}
+    </p>
+
+    <a
+    href="{% url 'description:hero_datail' hero.pk %}"
+    class="dota-card__link">
+    Подробнее о герое <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</article>

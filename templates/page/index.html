@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+  <title>Dota Heroes — Главная</title>
+</head>
+
+<body>
+  {% include 'includes/header.html' %}
+
+  <main>
+    <section
+  class="dota-intro"
+  style="--intro-bg: url('{% static 'img/background.jpg' %}');"
+>
+  <div class="dota-intro__content">
+    <p class="dota-intro__label">МИР DOTA 2</p>
+
+    <h1 class="dota-intro__title">
+      У каждого героя — своя история
+    </h1>
+
+    <p class="dota-intro__text">
+      Познакомься с героями Dota 2, узнай их особенности
+      и найди того, с кем начнётся твоя следующая победа.
+    </p>
+
+    <a href="{% url 'description:heroes' %}" class="dota-intro__button">
+      Все герои <span aria-hidden="true">→</span>
+    </a>
+  </div>
+    </section>
+    <section class="dota-heroes">
+      <div class="dota-heroes__heading">
+        <div>
+          <p class="dota-heroes__label">DOTA 2 • ГЕРОИ</p>
+          <h2 class="dota-heroes__title">Выбери своего героя</h2>
+        </div>
+
+        <p class="dota-heroes__subtitle">
+          Узнай историю, найди свой стиль игры.
+        </p>
+      </div>
+
+      <div class="dota-heroes__grid">
+        {% for hero in hero_list %}
+          {% include 'includes/heroes_card.html' %}
+        {% empty %}
+          <p class="dota-heroes__empty">
+            Герои скоро появятся.
+          </p>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  {% include 'includes/footer.html' %}
+</body>
+</html>

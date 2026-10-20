@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ hero.name }} — Dota Heroes</title>
+
+  <link rel="stylesheet" href="{% static 'css/header.css' %}">
+  <link rel="stylesheet" href="{% static 'css/hero_datail.css' %}">
+  <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+</head>
+
+<body>
+  {% include 'includes/header.html' %}
+
+  <main class="hero-detail">
+    <article>
+      <div class="hero-detail__intro">
+        <div class="hero-detail__picture">
+          <img
+            src="{% static hero.image %}"
+            alt="{{ hero.name }}"
+            class="hero-detail__image"
+          >
+        </div>
+
+        <div class="hero-detail__info">
+          <p class="hero-detail__label">ГЕРОЙ DOTA 2</p>
+
+          <h1 class="hero-detail__name">{{ hero.name }}</h1>
+
+          <div class="hero-detail__tags">
+            {% if hero.attribute %}
+              <span class="hero-detail__attribute">
+                {{ hero.attribute.name }}
+              </span>
+            {% endif %}
+
+            {% for position in hero.positions.all %}
+              <span class="hero-detail__position">
+                {{ position.name }}
+              </span>
+            {% endfor %}
+          </div>
+
+          <p class="hero-detail__summary">
+            {{ hero.short_description }}
+          </p>
+        </div>
+      </div>
+
+      <section class="hero-detail__description">
+        <h2>Общее описание</h2>
+
+        <div class="hero-detail__text">
+          {{ hero.description|linebreaks }}
+        </div>
+      </section>
+    </article>
+  </main>
+
+  {% include 'includes/footer.html' %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+footer,
+.site-footer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 30px 20px;
+    background: var(--bg-header, #0d141c);
+    color: #697580;
+    text-align: center;
+    border-top: 1px solid var(--border-soft, #252d35);
+}

@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dota Heroes — О нас</title>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+</head>
+
+<body>
+
+    {% include 'includes/header.html' %}
+
+    <main class="about-page">
+
+        <!-- Заголовок -->
+
+        <section class="about-intro">
+
+            <div class="about-subtitle">
+                О НАШЕМ ПРОЕКТЕ
+            </div>
+
+            <h1>
+                DOTA <span>HEROES</span>
+            </h1>
+
+            <p>
+                Добро пожаловать на Dota Heroes — информационный сайт,
+                посвящённый героям вселенной Dota 2.
+            </p>
+
+        </section>
+
+
+        <!-- Основная информация -->
+
+        <section class="about-content">
+
+            <div class="about-block">
+
+                <h2>Что это за сайт?</h2>
+
+                <p>
+                    Dota Heroes — это учебный веб-проект, созданный
+                    для изучения веб-разработки и работы с Django.
+                    Главная идея проекта — собрать информацию о героях
+                    Dota 2 в удобном и понятном формате.
+                </p>
+
+                <p>
+                    Здесь пользователь сможет ознакомиться с героями,
+                    узнать их характеристики, способности, роли и
+                    немного больше об истории каждого персонажа.
+                </p>
+
+            </div>
+
+
+            <div class="about-block">
+
+                <h2>Для чего создан проект?</h2>
+
+                <p>
+                    Основная цель проекта — создать простой и удобный
+                    сайт, который позволяет быстро находить информацию
+                    о любимых героях.
+                </p>
+
+                <p>
+                    Помимо этого, проект используется как практическая
+                    работа для изучения HTML, CSS, Python и Django,
+                    а также принципов создания современных веб-сайтов.
+                </p>
+
+            </div>
+
+
+            <div class="about-block">
+
+                <h2>Что здесь можно найти?</h2>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <div class="feature-number">01</div>
+
+                        <div>
+                            <h3>Герои</h3>
+                            <p>
+                                Информация о персонажах Dota 2,
+                                их ролях, характеристиках и способностях.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="feature">
+                        <div class="feature-number">02</div>
+
+                        <div>
+                            <h3>Новости</h3>
+                            <p>
+                                Последние события, обновления игры
+                                и интересные материалы.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="feature">
+                        <div class="feature-number">03</div>
+
+                        <div>
+                            <h3>Подробные описания</h3>
+                            <p>
+                                Более подробная информация о каждом
+                                герое и его особенностях.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Заключительный блок -->
+
+            <section class="about-quote">
+
+                <div class="quote-line"></div>
+
+                <p>
+                    «У каждого героя есть своя история.
+                    Мы собрали их в одном месте.»
+                </p>
+
+                <span>
+                    DOTA HEROES
+                </span>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    {% include 'includes/footer.html' %}
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dota Heroes — Новости</title>
+
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+</head>
+
+<body>
+
+    {% include 'includes/header.html' %}
+
+    <main>
+
+        <section class="news-header">
+
+            <div class="subtitle">
+                ПОСЛЕДНИЕ СОБЫТИЯ
+            </div>
+
+            <h1>
+                НОВОСТИ <span>DOTA</span>
+            </h1>
+
+            <p>
+                Последние события, обновления и интересные новости
+                из мира Dota 2.
+            </p>
+
+        </section>
+
+
+        <section class="featured-news">
+
+            <div class="featured-image">
+                <img src={% static "img/dota2_news.jpg" %} alt="Dota 2 News">
+            </div>
+
+            <div class="featured-content">
+
+                <div class="news-category">
+                    ОБНОВЛЕНИЕ
+                </div>
+
+                <h2>
+                    Новое обновление Dota 2
+                </h2>
+
+                <p class="date">
+                    19 сентября 2026
+                </p>
+
+                <p>
+                    В игре появились новые изменения, исправления
+                    баланса и другие интересные нововведения.
+                    Узнай подробнее о последних изменениях Dota 2.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Список новостей -->
+        <section class="news-section">
+
+            <div class="section-title">
+
+                <div>
+                    <h2>ПОСЛЕДНИЕ НОВОСТИ</h2>
+                    <p>
+                        Самые свежие события и обновления
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="news-grid">
+
+
+                <!-- Новость 1 -->
+                <article class="news-card">
+
+                    <img src="{% static 'img/juggernaut.png' %}" alt="Juggernaut">
+
+                    <div class="news-card-content">
+
+                        <div class="news-category">
+                            ГЕРОИ
+                        </div>
+
+                        <h3>
+                            Изменения Juggernaut
+                        </h3>
+
+                        <p class="date">
+                            19 сентября 2026
+                        </p>
+
+                        <p>
+                            Герой получил несколько изменений
+                            способностей и характеристик.
+                        </p>
+
+
+                    </div>
+
+                </article>
+
+
+                <!-- Новость 2 -->
+                <article class="news-card">
+
+                    <img src="{% static 'img/pudge.png' %}" alt="Pudge">
+
+                    <div class="news-card-content">
+
+                        <div class="news-category">
+                            ГЕРОИ
+                        </div>
+
+                        <h3>
+                            Pudge снова в центре внимания
+                        </h3>
+
+                        <p class="date">
+                            19 сентября 2026
+                        </p>
+
+                        <p>
+                            Игроки обсуждают изменения героя
+                            и новые способы его использования.
+                        </p>
+
+
+                    </div>
+
+                </article>
+
+
+                <!-- Новость 3 -->
+                <article class="news-card">
+
+                    <img src="{% static 'img/invoker.png' %}" alt="Invoker">
+
+                    <div class="news-card-content">
+
+                        <div class="news-category">
+                            ОБНОВЛЕНИЕ
+                        </div>
+
+                        <h3>
+                            Изменения способностей Invoker
+                        </h3>
+
+                        <p class="date">
+                            19 сентября 2026
+                        </p>
+
+                        <p>
+                            Разработчики внесли изменения
+                            в способности знаменитого мага.
+                        </p>
+
+
+                    </div>
+
+                </article>
+
+
+                <!-- Новость 4 -->
+                <article class="news-card">
+
+                    <img src = "{% static 'img/Minimap.jpg' %}" alt="Minimap">
+
+                    <div class="news-card-content">
+
+                        <div class="news-category">
+                            ИГРОВОЙ ПРОЦЕСС
+                        </div>
+
+                        <h3>
+                            Новые изменения карты
+                        </h3>
+
+                        <p class="date">
+                            19 сентября 2026
+                        </p>
+
+                        <p>
+                            На карте появились новые элементы,
+                            которые изменили привычный игровой процесс.
+                        </p>
+
+
+                    </div>
+
+                </article>
+
+
+                <!-- Новость 5 -->
+                <article class="news-card">
+
+                    <img src="{% static 'img/antimage.png' %}" alt="Anti-Mage">
+
+                    <div class="news-card-content">
+
+                        <div class="news-category">
+                            СООБЩЕСТВО
+                        </div>
+
+                        <h3>
+                            Лучшие герои текущей меты
+                        </h3>
+
+                        <p class="date">
+                            21 сентября 2026
+                        </p>
+
+                        <p>
+                            Разбираем героев, которых игроки
+                            чаще всего выбирают в последнее время.
+                        </p>
+
+
+                    </div>
+
+                </article>
+
+
+                <!-- Новость 6 -->
+                <article class="news-card">
+
+                    <img src="{% static 'img/TI2026.png' %}" alt="The International 2026">
+
+                    <div class="news-card-content">
+
+                        <div class="news-category">
+                            ТУРНИРЫ
+                        </div>
+
+                        <h3>
+                            Крупный турнир по Dota 2
+                        </h3>
+
+                        <p class="date">
+                            13 по 23 августа 2026
+                        </p>
+
+                        <p>
+                            Лучшие команды мира встретились
+                            в очередном крупном турнире.
+                        </p>
+
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+{% include 'includes/footer.html' %}
+
+</body>
+</html>

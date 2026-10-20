@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  background: #0d1119;
+  color: #f4f4f6;
+}
+
+.hero-detail,
+.hero-detail * {
+  box-sizing: border-box;
+}
+
+.hero-detail {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+/* Изображение и основная информация */
+.hero-detail__intro {
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding: 32px;
+
+  background: linear-gradient(145deg, #1c2230, #111620);
+  border: 1px solid #303849;
+  border-radius: 20px;
+}
+
+.hero-detail__picture {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: radial-gradient(ellipse at center, #39465b, #151b26);
+  border: 1px solid #354154;
+  border-radius: 14px;
+}
+
+.hero-detail__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-detail__info {
+  min-width: 0;
+}
+
+.hero-detail__label {
+  margin: 0 0 12px;
+  color: #ff9483;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero-detail__name {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+/* Атрибут и позиции */
+.hero-detail__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.hero-detail__attribute,
+.hero-detail__position {
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.hero-detail__attribute {
+  color: #ffb2a5;
+  background: rgb(232 91 69 / 12%);
+  border-color: rgb(232 91 69 / 25%);
+}
+
+.hero-detail__position {
+  color: #c5cede;
+  background: #252e3d;
+  border-color: #354154;
+}
+
+.hero-detail__summary {
+  margin: 0;
+  color: #b3bdcd;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Полное описание */
+.hero-detail__description {
+  margin-top: 28px;
+  padding: 36px 40px;
+  background: #151b26;
+  border: 1px solid #303849;
+  border-radius: 18px;
+}
+
+.hero-detail__description h2 {
+  margin: 0 0 24px;
+  padding-left: 16px;
+  border-left: 3px solid #e06352;
+  color: #f5f6fa;
+  font-size: 26px;
+}
+
+.hero-detail__text {
+  color: #c2cad7;
+  font-size: 17px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+}
+
+.hero-detail__text p {
+  margin: 0 0 20px;
+}
+
+.hero-detail__text p:last-child {
+  margin-bottom: 0;
+}

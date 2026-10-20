@@ -1,0 +1,293 @@
+body {
+  margin: 0;
+}
+
+.heroes-page,
+.heroes-page * {
+  box-sizing: border-box;
+}
+
+/* Заголовок страницы */
+.heroes-header {
+  padding: 64px 24px;
+  text-align: center;
+  background: linear-gradient(145deg, #1c2230, #111620);
+  border-bottom: 1px solid #303849;
+}
+
+.heroes-header__label {
+  margin: 0 0 16px;
+  color: #ff806f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.heroes-header__title {
+  margin: 0 0 20px;
+  color: #f4f4f6;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.heroes-header__title span {
+  color: #ff9483;
+}
+
+.heroes-header__text {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #b3bdcd;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Секция героев */
+.dota-heroes {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.dota-heroes__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.dota-heroes__label {
+  margin: 0 0 10px;
+  color: #ff806f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.dota-heroes__title {
+  margin: 0;
+  color: #f4f4f6;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.dota-heroes__subtitle {
+  max-width: 260px;
+  margin: 0;
+  color: #a6adbc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Пять карточек в ряд */
+.dota-heroes__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Карточка */
+.dota-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+
+  background: linear-gradient(145deg, #1c2230, #111620);
+  border: 1px solid #303849;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 20%);
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.dota-card:hover {
+  transform: translateY(-6px);
+  border-color: #ae5146;
+  box-shadow: 0 18px 36px rgb(0 0 0 / 32%);
+}
+
+/* Изображение */
+.dota-card__picture {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: radial-gradient(ellipse at center, #343e50, #141922);
+  border-bottom: 1px solid #303849;
+}
+
+.dota-card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.dota-card:hover .dota-card__image {
+  transform: scale(1.05);
+}
+
+/* Содержимое карточки */
+.dota-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 18px;
+}
+
+.dota-card__title {
+  margin: 0 0 14px;
+  color: #f5f6fa;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+/* Атрибут и позиции */
+.dota-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+
+.dota-card__attribute,
+.dota-card__position {
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dota-card__attribute {
+  color: #ffb2a5;
+  background: rgb(232 91 69 / 12%);
+  border-color: rgb(232 91 69 / 25%);
+}
+
+.dota-card__position {
+  color: #c5cede;
+  background: #252e3d;
+  border-color: #354154;
+}
+
+/* Описание */
+.dota-card__description {
+  margin: 0 0 24px;
+  color: #b3bdcd;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Ссылка внизу карточки */
+.dota-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 16px;
+
+  border-top: 1px solid #303849;
+  color: #ff9483;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dota-card__link:hover {
+  color: #ffd0c7;
+}
+
+.dota-card__link:focus-visible {
+  outline: 2px solid #ff9483;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+/* Сообщение, если героев нет */
+.dota-heroes__empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 32px;
+  color: #b3bdcd;
+  background: #171d28;
+  border: 1px dashed #404b60;
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* Адаптация под ширину экрана */
+@media (max-width: 1250px) {
+  .dota-heroes__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .dota-heroes__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .heroes-header {
+    padding: 48px 20px;
+  }
+
+  .dota-heroes {
+    padding: 32px 20px;
+  }
+
+  .dota-heroes__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .dota-heroes__title {
+    font-size: 30px;
+  }
+
+  .dota-heroes__subtitle {
+    max-width: none;
+  }
+
+  .dota-heroes__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .dota-heroes__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dota-card,
+  .dota-card__image,
+  .dota-card__link {
+    transition: none;
+  }
+
+  .dota-card:hover,
+  .dota-card:hover .dota-card__image {
+    transform: none;
+  }
+}
