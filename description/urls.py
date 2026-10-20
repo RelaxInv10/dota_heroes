@@ -5,5 +5,5 @@ app_name = 'description'
 
 urlpatterns = [
     path('heroes/', views.heroes, name='heroes'),
-    path('heroes/<int:pk>/', views.hero_datail, name='hero_datail'),
+    path('heroes/<int:pk>/', views.hero_detail, name='hero_detail'),
 ]

@@ -8,7 +8,7 @@ def heroes(request):
 
     return render(request, 'description/heroes.html', {'hero_list': hero_list})
 
-def hero_datail(request, pk):
+def hero_detail(request, pk):
     hero = get_object_or_404(
         Hero.objects
         .select_related('attribute')
@@ -17,4 +17,4 @@ def hero_datail(request, pk):
         pk=pk,
     )
 
-    return render(request, 'description/hero_datail.html', {'hero': hero})
+    return render(request, 'description/hero_detail.html', {'hero': hero})
